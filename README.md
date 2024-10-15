@@ -50,7 +50,7 @@
 You can use the following script to create a VPC network and associated firewall rules using the `gcloud` command-line tool:
 
 ```bash
-gcloud compute networks create vpc-02 --project=velocity-406304 --description=example\ vpc\ for\ learning.\ created\ by\ sritam --subnet-mode=auto --mtu=1460 --bgp-routing-mode=regional --bgp-best-path-selection-mode=legacy
+gcloud compute networks create vpc-02 --project=velocity-406304 --description=example\ vpc\ for\ learning.\ created\ by mode=auto --mtu=1460 --bgp-routing-mode=regional --bgp-best-path-selection-mode=legacy
 
 gcloud compute firewall-rules create vpc-02-allow-custom --project=velocity-406304 --network=projects/velocity-406304/global/networks/vpc-02 --description=Allows\ connection\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ custom\ protocols. --direction=INGRESS --priority=65534 --source-ranges=10.128.0.0/9 --action=ALLOW --rules=all
 
